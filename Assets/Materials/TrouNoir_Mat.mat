@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: TrouNoir_Mat
-  m_Shader: {fileID: -6465566751694194690, guid: 144a2c60e09bc43649e60914c61abd82, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: de131771b4f1142f59cea4bdeeb538ad, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -19,6 +19,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_C12BD630:
+        m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -48,6 +52,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_81E0F91: 50
+    - Vector1_93FA5D6E: 2
+    - Vector1_D1756748: 1
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
