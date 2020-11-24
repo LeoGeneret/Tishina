@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Residu_Mat
-  m_Shader: {fileID: -6465566751694194690, guid: de131771b4f1142f59cea4bdeeb538ad, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 9ae2328b6dcee1944a2d530835903f61, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
