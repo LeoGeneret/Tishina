@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Boule
+  m_Name: Boule2 1
   m_Shader: {fileID: -6465566751694194690, guid: 1a30321c87ba34e9290f4189f2cdf2c5, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -84,7 +84,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_F3D2A7E9: {r: 28.581865, g: 5.0983872, b: 29.045357, a: 0}
+    - Color_F3D2A7E9: {r: 28.794107, g: 4.5556016, b: 29.266285, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
