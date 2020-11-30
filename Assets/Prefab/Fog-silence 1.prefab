@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1802012497366123072}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.52, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 5385841580092000524}
   m_RootOrder: 1
@@ -221,8 +221,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 1, g: 1, b: 1, a: 0.40392157}
-      maxColor: {r: 1, g: 1, b: 1, a: 0.50980395}
+      minColor: {r: 0.20867243, g: 0.19063722, b: 0.26415092, a: 0.40392157}
+      maxColor: {r: 0.16141579, g: 0.14760591, b: 0.2924528, a: 0.50980395}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -865,7 +865,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 12
+      scalar: 30
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -4824,7 +4824,7 @@ GameObject:
   - component: {fileID: 7556730883642003755}
   - component: {fileID: 3918624045749891559}
   m_Layer: 0
-  m_Name: Fog-silence
+  m_Name: Fog-silence 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9653,7 +9653,7 @@ Transform:
   m_GameObject: {fileID: 5822448216890315574}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 5385841580092000524}
   m_RootOrder: 0
@@ -9847,8 +9847,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 1, g: 1, b: 1, a: 0.16470589}
-      maxColor: {r: 1, g: 1, b: 1, a: 0.78039217}
+      minColor: {r: 0.10179445, g: 0.076539695, b: 0.3773585, a: 0.16470589}
+      maxColor: {r: 0.24433537, g: 0.014239941, b: 0.6037736, a: 0.78039217}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -10491,7 +10491,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 12
+      scalar: 30
       minScalar: 10
       maxCurve:
         serializedVersion: 2
