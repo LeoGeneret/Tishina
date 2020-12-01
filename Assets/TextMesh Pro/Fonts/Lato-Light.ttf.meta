@@ -3,8 +3,8 @@ guid: 67e2e034c2fcd464d9230c8cde0e38c3
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
-  fontSize: 16
-  forceTextureCase: -2
+  fontSize: 261
+  forceTextureCase: -1
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
@@ -13,10 +13,10 @@ TrueTypeFontImporter:
   fallbackFontReferences:
   - {fileID: 12800000, guid: f00bc727963df4c1a946b0b3338cc907, type: 3}
   customCharacters: 
-  fontRenderingMode: 0
+  fontRenderingMode: 3
   ascentCalculationMode: 1
   useLegacyBoundsCalculation: 0
-  shouldRoundAdvanceValue: 1
+  shouldRoundAdvanceValue: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
