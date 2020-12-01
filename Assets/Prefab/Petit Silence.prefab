@@ -27,6 +27,42 @@ PrefabInstance:
       propertyPath: InitialModule.startColor.maxColor.b
       value: 0.7169812
       objectReference: {fileID: 0}
+    - target: {fileID: 1908157284882593561, guid: 62e9d2e4e79084901b00782c952ab31a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.629971
+      objectReference: {fileID: 0}
+    - target: {fileID: 1908157284882593561, guid: 62e9d2e4e79084901b00782c952ab31a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.629971
+      objectReference: {fileID: 0}
+    - target: {fileID: 1908157284882593561, guid: 62e9d2e4e79084901b00782c952ab31a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.629971
+      objectReference: {fileID: 0}
+    - target: {fileID: 1908157284882593561, guid: 62e9d2e4e79084901b00782c952ab31a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 1908157284882593561, guid: 62e9d2e4e79084901b00782c952ab31a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 103.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 1908157284882593561, guid: 62e9d2e4e79084901b00782c952ab31a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 1908157284882593561, guid: 62e9d2e4e79084901b00782c952ab31a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.72707915
+      objectReference: {fileID: 0}
+    - target: {fileID: 1908157284882593561, guid: 62e9d2e4e79084901b00782c952ab31a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6865537
+      objectReference: {fileID: 0}
+    - target: {fileID: 1908157284882593561, guid: 62e9d2e4e79084901b00782c952ab31a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -93.284
+      objectReference: {fileID: 0}
     - target: {fileID: 3051830321013834539, guid: 62e9d2e4e79084901b00782c952ab31a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 129.36
@@ -83,6 +119,34 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.73086
       objectReference: {fileID: 0}
+    - target: {fileID: 4185746693980586708, guid: 62e9d2e4e79084901b00782c952ab31a, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754388979669765268, guid: 62e9d2e4e79084901b00782c952ab31a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.6529933
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754388979669765268, guid: 62e9d2e4e79084901b00782c952ab31a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.6529931
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754388979669765268, guid: 62e9d2e4e79084901b00782c952ab31a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.6529933
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754388979669765268, guid: 62e9d2e4e79084901b00782c952ab31a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.108
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754388979669765268, guid: 62e9d2e4e79084901b00782c952ab31a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 103.615
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754388979669765268, guid: 62e9d2e4e79084901b00782c952ab31a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.32
+      objectReference: {fileID: 0}
     - target: {fileID: 6414541428583140347, guid: 62e9d2e4e79084901b00782c952ab31a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -93,7 +157,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a1e756b6d972438429a0833bd8c1d841, type: 2}
     - target: {fileID: 8616892794623765858, guid: 62e9d2e4e79084901b00782c952ab31a, type: 3}
       propertyPath: m_Name
-      value: TrouNoir Variant
+      value: Petit Silence
       objectReference: {fileID: 0}
     - target: {fileID: 8708352001799512953, guid: 62e9d2e4e79084901b00782c952ab31a, type: 3}
       propertyPath: m_Materials.Array.data[0]
