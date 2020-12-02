@@ -4858,6 +4858,7 @@ GameObject:
   - component: {fileID: 8708352001799512953}
   - component: {fileID: 5928350033973359799}
   - component: {fileID: 978348983151457988}
+  - component: {fileID: 657629968633810342}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -4937,7 +4938,7 @@ SphereCollider:
   m_GameObject: {fileID: 6731804645008041826}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -7546,6 +7547,19 @@ MonoBehaviour:
   m_SkinMeshRef: {fileID: 0}
   m_OriginalMeshObject: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
   m_Mode: 0
+--- !u!65 &657629968633810342
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6731804645008041826}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.14, y: 4.04, z: 5.2}
+  m_Center: {x: -0.1581858, y: -0.282557, z: -0.06230801}
 --- !u!1 &8616892794623765858
 GameObject:
   m_ObjectHideFlags: 0
