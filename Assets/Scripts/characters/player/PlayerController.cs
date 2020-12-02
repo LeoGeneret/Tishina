@@ -250,12 +250,20 @@ public class PlayerController : MonoBehaviour
 	{
 		if (controller.isGrounded)
 		{
-			float jumpVelocity = Mathf.Sqrt(-2 * gravity * jumpHeight);
-			velocityY = jumpVelocity;
-
 			int jumpHash = Animator.StringToHash("jump");
 			animator.SetTrigger(jumpHash);
+
+			StartCoroutine(jumpDelay());
 		}
+	}
+
+
+	IEnumerator jumpDelay()
+	{
+		yield return new WaitForSeconds(0.4f);
+
+		float jumpVelocity = Mathf.Sqrt(-2 * gravity * jumpHeight);
+		velocityY = jumpVelocity;
 	}
 
 	float GetModifiedSmoothTime(float smoothTime)
