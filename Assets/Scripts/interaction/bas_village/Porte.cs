@@ -2,43 +2,41 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bridge : Interactable
+public class Porte : Interactable
 {
-    public Transform bridge;
+    public Transform door;
 
     public float smoothTime = 1.3f;
-    public float endPos = 52f;
-
-    Vector3 rotationSmoothVelocity;
+    public float endPos = -74.9f;
 
     protected new void Start()
     {
         base.Start();
     }
 
-    void UpdateBridge()
+    void UpdateDoor()
     {
-        StartCoroutine(Rotate(Vector3.forward, endPos, smoothTime));
+        StartCoroutine(Rotate(Vector3.up, endPos, smoothTime));
     }
 
     IEnumerator Rotate(Vector3 axis, float angle, float duration = 1.0f)
     {
-        Quaternion from = bridge.transform.rotation;
-        Quaternion to = bridge.transform.rotation;
+        Quaternion from = door.rotation;
+        Quaternion to = door.rotation;
         to *= Quaternion.Euler(axis * angle);
 
         float elapsed = 0.0f;
         while (elapsed < duration)
         {
-            bridge.transform.rotation = Quaternion.Slerp(from, to, elapsed / duration);
+            door.rotation = Quaternion.Slerp(from, to, elapsed / duration);
             elapsed += Time.deltaTime;
             yield return null;
         }
-        bridge.transform.rotation = to;
+        door.rotation = to;
     }
 
     public override void Interact()
     {
-        UpdateBridge();
+        UpdateDoor();
     }
 }
