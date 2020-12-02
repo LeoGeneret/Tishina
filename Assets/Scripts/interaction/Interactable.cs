@@ -209,7 +209,6 @@ public abstract class Interactable : MonoBehaviour
 
     private void reColor()
     {
-        Debug.Log("reColor");
         if (soundedObject != null)
         {
             StartCoroutine(SmoothRecolor(0, 1f, 2f));

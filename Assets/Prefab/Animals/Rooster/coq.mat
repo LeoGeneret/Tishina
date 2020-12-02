@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-1168955423725285745
+--- !u!114 &-175665483593279208
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Cloche
+  m_Name: coq
   m_Shader: {fileID: -6465566751694194690, guid: 8351c9cb76f5044f9a33a33e85eef967, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -33,7 +33,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_D3E755D0:
-        m_Texture: {fileID: 2800000, guid: d7986ed203f246d4e9e89830efec4a3e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7c5a0d61ead42ef41ae0f7e3cd7d321b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture3D_71F2253:
