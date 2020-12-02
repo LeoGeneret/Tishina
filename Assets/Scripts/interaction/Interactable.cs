@@ -26,6 +26,8 @@ public abstract class Interactable : MonoBehaviour
     private AudioSource _audio;
     protected bool hasRecorded = false;
 
+    public bool isRepeatable = false;
+
     public enum InteractionType
     {
         Microphone,
@@ -94,27 +96,36 @@ public abstract class Interactable : MonoBehaviour
 
         if (active)
         {
-            KeyCode key = KeyCode.E;
-            
-            if (this.interactionType == InteractionType.Animation)
+            if (!hasRecorded || (hasRecorded && isRepeatable))
             {
-                textArea.text = this.GetDescription();
+                KeyCode key = KeyCode.E;
 
-                if (Input.GetKeyDown(key))
+                if (this.interactionType == InteractionType.Animation)
                 {
-                    this.Interact();
+                    textArea.text = this.GetDescription();
+
+                    if (Input.GetKeyDown(key))
+                    {
+                        this.Interact();
+                        hasRecorded = true;
+                    }
+                }
+                else
+                {
+                    PlayerController playerController = player.GetComponent<PlayerController>();
+
+                    if (playerController.hasAmmo())
+                    {
+                        SoundRecord(key);
+                    }
+                    else
+                    {
+                        textArea.text = "Plus de munitions";
+                    }
                 }
             } else
             {
-                PlayerController playerController = player.GetComponent<PlayerController>();
-
-                if (playerController.hasAmmo())
-                {
-                    SoundRecord(key);
-                } else
-                {
-                    textArea.text = "Plus de munitions";
-                }
+                textArea.text = "";
             }
         }
         else
@@ -129,16 +140,23 @@ public abstract class Interactable : MonoBehaviour
 
         if (aiming)
         {
-            PlayerController playerController = player.GetComponent<PlayerController>();
-
-            if (playerController.hasAmmo())
+            if (!hasRecorded || (hasRecorded && isRepeatable))
             {
-                KeyCode key = KeyCode.E;
+                PlayerController playerController = player.GetComponent<PlayerController>();
 
-                SoundRecord(key);
+                if (playerController.hasAmmo())
+                {
+                    KeyCode key = KeyCode.E;
+
+                    SoundRecord(key);
+                }
+                else
+                {
+                    textArea.text = "Plus de munitions";
+                }
             } else
             {
-                textArea.text = "Plus de munitions";
+                textArea.text = "";
             }
         }
         else
