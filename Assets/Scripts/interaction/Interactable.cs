@@ -40,7 +40,7 @@ public abstract class Interactable : MonoBehaviour
     protected virtual void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        Transform canvas = GameObject.Find("Canvas").transform;
+        Transform canvas = GameObject.FindGameObjectWithTag("UI").transform;
 
         GameObject textField = canvas.Find("InteractTextArea").gameObject;
         GameObject duplicate = Instantiate(textField, canvas);
