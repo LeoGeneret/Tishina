@@ -5,6 +5,9 @@ using UnityEngine;
 public class Charette : Interactable
 {
     public Transform charette;
+    public GameObject aura;
+    public Animator horseAnimator;
+    public GameObject horseGameObject;
 
     public float smoothTime = 1.3f;
     public float endPos = 62f;
@@ -16,13 +19,26 @@ public class Charette : Interactable
 
     void UpdateCharette()
     {
-        Vector3 movePos = new Vector3(charette.position.x, charette.position.y, endPos);
+        StartCoroutine(Scale(aura, new Vector3(0, 0, 0), smoothTime / 3));
+        StartCoroutine(LerpPosition(new Vector3(322.18f,31.96f,76.21f), smoothTime));
 
-        /*charette.position = Vector3.Lerp(charette.position, movePos, Time.deltaTime * smoothTime);
-        Debug.Log(charette.position);*/
+        horseGameObject.GetComponent<Collider>().enabled = false;
 
-        StartCoroutine(LerpPosition(movePos, smoothTime));
+        StartCoroutine(Walk());
     }
+
+
+    IEnumerator Walk()
+    {
+        int walkHash = Animator.StringToHash("walk");
+        horseAnimator.SetTrigger(walkHash);
+        
+        yield return new WaitForSeconds(smoothTime);
+
+        int stopHash = Animator.StringToHash("stop");
+        horseAnimator.SetTrigger(stopHash);
+    }
+
 
     IEnumerator LerpPosition(Vector3 targetPosition, float duration)
     {
@@ -37,6 +53,19 @@ public class Charette : Interactable
         }
 
         charette.position = targetPosition;
+    }
+
+    IEnumerator Scale(GameObject objectToScale, Vector3 scaleTo, float seconds)
+    {
+        float elapsedTime = 0;
+        Vector3 startingScale = objectToScale.transform.localScale;
+        while (elapsedTime < seconds)
+        {
+            objectToScale.transform.localScale = Vector3.Lerp(startingScale, scaleTo, (elapsedTime / seconds));
+            elapsedTime += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+        objectToScale.transform.position = scaleTo;
     }
 
     public override void Interact()
