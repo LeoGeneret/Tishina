@@ -26,6 +26,9 @@ public abstract class Interactable : MonoBehaviour
     private AudioSource _audio;
     protected bool hasRecorded = false;
 
+    public GameObject soundedObject;
+    public float recolorDuration = 2f;
+
     public bool isRepeatable = false;
 
     public enum InteractionType
@@ -192,6 +195,7 @@ public abstract class Interactable : MonoBehaviour
                 hasRecorded = true;
                 playerController.setRecording(false);
                 playerController.removeAmmo();
+                this.reColor();
                 this.Interact();
             }
             else
@@ -201,6 +205,27 @@ public abstract class Interactable : MonoBehaviour
                 textArea.text = "RECORDING";
             }
         }
+    }
+
+    private void reColor()
+    {
+        Debug.Log("reColor");
+        if (soundedObject != null)
+        {
+            StartCoroutine(SmoothRecolor(0, 1f, 2f));
+        }
+    }
+    IEnumerator SmoothRecolor(float v_start, float v_end, float duration)
+    {
+        float elapsed = 0.0f;
+        while (elapsed < duration)
+        {
+            float speed = Mathf.Lerp(v_start, v_end, elapsed / duration);
+            soundedObject.GetComponent<Renderer>().material.SetFloat("Vector1_33C41BE9", speed);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+        soundedObject.GetComponent<Renderer>().material.SetFloat("Vector1_33C41BE9", v_end);
     }
 
     // GetAveragedVolume : Only Mic Part
