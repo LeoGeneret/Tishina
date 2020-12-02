@@ -36,7 +36,11 @@ public abstract class Interactable : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         Transform canvas = GameObject.Find("Canvas").transform;
-        textArea = canvas.Find("InteractTextArea").GetComponent<TMPro.TextMeshProUGUI>();
+
+        GameObject textField = canvas.Find("InteractTextArea").gameObject;
+        GameObject duplicate = Instantiate(textField, canvas);
+
+        textArea = duplicate.GetComponent<TMPro.TextMeshProUGUI>();
 
         CanInteract();
 
