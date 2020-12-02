@@ -8,8 +8,7 @@ public class LightSwitch : Interactable
 
     public float smoothTime = 1.3f;
     public float endPos = 180;
-    private Quaternion targetRotation;
-
+    public Animator roosterAnimator;
 
     protected new void Start()
     {
@@ -18,6 +17,9 @@ public class LightSwitch : Interactable
 
     void UpdateLight()
     {
+        int liveHash = Animator.StringToHash("live");
+        roosterAnimator.SetTrigger(liveHash);
+
         StartCoroutine(Rotate(Vector3.up, endPos, smoothTime));
     }
     IEnumerator Rotate(Vector3 axis, float angle, float duration = 1.0f)
