@@ -10,6 +10,8 @@ public class LightSwitch : Interactable
     public float endPos = 180;
     public Animator roosterAnimator;
 
+    public GameObject aura;
+
     protected new void Start()
     {
         base.Start();
@@ -21,6 +23,20 @@ public class LightSwitch : Interactable
         roosterAnimator.SetTrigger(liveHash);
 
         StartCoroutine(Rotate(Vector3.up, endPos, smoothTime));
+
+        StartCoroutine(Scale(aura, new Vector3(0, 0, 0), 3f / 3));
+    }
+    IEnumerator Scale(GameObject objectToScale, Vector3 scaleTo, float seconds)
+    {
+        float elapsedTime = 0;
+        Vector3 startingScale = objectToScale.transform.localScale;
+        while (elapsedTime < seconds)
+        {
+            objectToScale.transform.localScale = Vector3.Lerp(startingScale, scaleTo, (elapsedTime / seconds));
+            elapsedTime += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+        objectToScale.transform.position = scaleTo;
     }
     IEnumerator Rotate(Vector3 axis, float angle, float duration = 1.0f)
     {

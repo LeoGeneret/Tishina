@@ -9,6 +9,8 @@ public class Bridge : Interactable
     public float smoothTime = 1.3f;
     public float endPos = 52f;
 
+    public GameObject aura;
+
     Vector3 rotationSmoothVelocity;
 
     protected new void Start()
@@ -19,8 +21,21 @@ public class Bridge : Interactable
     void UpdateBridge()
     {
         StartCoroutine(Rotate(Vector3.forward, endPos, smoothTime));
-    }
 
+        StartCoroutine(Scale(aura, new Vector3(0, 0, 0), 3f / 3));
+    }
+    IEnumerator Scale(GameObject objectToScale, Vector3 scaleTo, float seconds)
+    {
+        float elapsedTime = 0;
+        Vector3 startingScale = objectToScale.transform.localScale;
+        while (elapsedTime < seconds)
+        {
+            objectToScale.transform.localScale = Vector3.Lerp(startingScale, scaleTo, (elapsedTime / seconds));
+            elapsedTime += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+        objectToScale.transform.position = scaleTo;
+    }
     IEnumerator Rotate(Vector3 axis, float angle, float duration = 1.0f)
     {
         Quaternion from = bridge.transform.rotation;
