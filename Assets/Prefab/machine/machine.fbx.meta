@@ -13,6 +13,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Basic_carreau
+    second: {fileID: 2100000, guid: f21f35ee94b714817940b3130c89c86c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Cuivre
     second: {fileID: 2100000, guid: 961f171cdf8f74a2ca4cf38b9c54be24, type: 2}
   - first:
@@ -80,6 +85,76 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Gold
     second: {fileID: 2100000, guid: f21f35ee94b714817940b3130c89c86c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: base-tuyau
+    second: {fileID: 2100000, guid: 183d1ae9f12e60d43b49b606864c903a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cadran-pression
+    second: {fileID: 2100000, guid: 5c5028f94cc77844d98a48df1071ff76, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: escalier
+    second: {fileID: 2100000, guid: 5c5028f94cc77844d98a48df1071ff76, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fleche-cadran
+    second: {fileID: 2100000, guid: 4118a9f4b879c440a9604c69d787832c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: gros-bouton
+    second: {fileID: 2100000, guid: 961f171cdf8f74a2ca4cf38b9c54be24, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: jauge
+    second: {fileID: 2100000, guid: 69fbae997db0a43bb91c3e1cc326fda4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: manivelle
+    second: {fileID: 2100000, guid: 961f171cdf8f74a2ca4cf38b9c54be24, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: meuble-tab-bord
+    second: {fileID: 2100000, guid: 183d1ae9f12e60d43b49b606864c903a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mini-bouton
+    second: {fileID: 2100000, guid: f21f35ee94b714817940b3130c89c86c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mini-tab-bord
+    second: {fileID: 2100000, guid: 5c5028f94cc77844d98a48df1071ff76, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mur
+    second: {fileID: 2100000, guid: 183d1ae9f12e60d43b49b606864c903a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: platefome
+    second: {fileID: 2100000, guid: 5c5028f94cc77844d98a48df1071ff76, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: poteau
+    second: {fileID: 2100000, guid: 183d1ae9f12e60d43b49b606864c903a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: support-bouton
+    second: {fileID: 2100000, guid: 4118a9f4b879c440a9604c69d787832c, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
