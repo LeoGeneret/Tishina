@@ -43,10 +43,13 @@ public class PlayerController : MonoBehaviour
 	[Range(1, 10)]
 	public int damage = 1;
 	private float timer;
+	// GUN SOUND
+	private AudioSource gunAudio;
 
 	void Start()
 	{
 		ammo = PlayerAmmo.Ammo;
+		gunAudio = transform.GetComponent<AudioSource>();
 		// animator = GetComponent<Animator>();
 		cam = Camera.main;
 		camController = cam.GetComponent<ThirdPersonCamera>();
@@ -172,12 +175,22 @@ public class PlayerController : MonoBehaviour
                     {
 						int vacumHash = Animator.StringToHash("vacum");
 						animator.SetTrigger(vacumHash);
+
+						if (gunAudio)
+						{
+							gunAudio.Play();
+						}
 					}
 
 
 					if (shoot)
 					{
 						animator.SetBool("vacuming", true);
+
+						if (gunAudio && !gunAudio.isPlaying)
+                        {
+							gunAudio.Play();
+						}
 
 						if (timer >= fireRate)
 						{
@@ -188,23 +201,47 @@ public class PlayerController : MonoBehaviour
 					else
 					{
 						animator.SetBool("vacuming", false);
+
+						if (gunAudio)
+						{
+							gunAudio.Stop();
+						}
 					}
 				} else
                 {
 					animator.SetBool("vacuming", false);
+					
+					if (gunAudio)
+					{
+						gunAudio.Stop();
+					}
 				}
 
 				if (shootPressUp)
                 {
 					animator.SetBool("vacuming", false);
+
+					if (gunAudio)
+					{
+						gunAudio.Stop();
+					}
 				}
 			} else
             {
 				animator.SetBool("vacuming", false);
+
+				if (gunAudio)
+				{
+					gunAudio.Stop();
+				}
 			}
 		} else
         {
 			animator.SetBool("vacuming", false);
+			if (gunAudio)
+			{
+				gunAudio.Stop();
+			}
 			cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, startFov, aimSmoothTime * Time.deltaTime);
 		}
     }
@@ -224,6 +261,10 @@ public class PlayerController : MonoBehaviour
 		if (health.isDead())
         {
 			animator.SetBool("vacuming", false);
+			if (gunAudio)
+			{
+				gunAudio.Stop();
+			}
 			addAmmo();
         }
 	}
