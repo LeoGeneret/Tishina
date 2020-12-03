@@ -1,5 +1,6 @@
-﻿using UnityEngine;
-
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 public class Health : MonoBehaviour
 {
 
@@ -36,6 +37,20 @@ public class Health : MonoBehaviour
 
     private void Die()
     {
-        gameObject.SetActive(false);
+        StartCoroutine(Scale(gameObject, new Vector3(0, 0, 0), 1f));
+    }
+
+    IEnumerator Scale(GameObject objectToScale, Vector3 scaleTo, float seconds)
+    {
+        float elapsedTime = 0;
+        Vector3 startingScale = objectToScale.transform.localScale;
+        while (elapsedTime < seconds)
+        {
+            objectToScale.transform.localScale = Vector3.Lerp(startingScale, scaleTo, (elapsedTime / seconds));
+            elapsedTime += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+        objectToScale.transform.position = scaleTo;
+        objectToScale.SetActive(false);
     }
 }
