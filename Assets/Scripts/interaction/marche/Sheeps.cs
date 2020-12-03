@@ -30,6 +30,8 @@ public class Sheeps : Interactable
     public Animator staticSheep2;
     public GameObject staticSheep2Obj;
 
+    public GameObject aura;
+
     public float duration = 2f;
 
     protected new void Start()
@@ -66,6 +68,20 @@ public class Sheeps : Interactable
         StartCoroutine(SmoothRecolor(staticSheep2Obj, 0, 1f, 2f));
 
         transform.GetComponent<Collider>().enabled = false;
+
+        StartCoroutine(Scale(aura, new Vector3(0, 0, 0), 3f / 3));
+    }
+    IEnumerator Scale(GameObject objectToScale, Vector3 scaleTo, float seconds)
+    {
+        float elapsedTime = 0;
+        Vector3 startingScale = objectToScale.transform.localScale;
+        while (elapsedTime < seconds)
+        {
+            objectToScale.transform.localScale = Vector3.Lerp(startingScale, scaleTo, (elapsedTime / seconds));
+            elapsedTime += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+        objectToScale.transform.position = scaleTo;
     }
     IEnumerator LerpPosition(Transform obj, Animator anim, Vector3 targetPosition, float duration)
     {
