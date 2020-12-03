@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/1_Basse_Cour.unity
     guid: 2493370fbdd95ee499eb3df61b9b9f47
+  - enabled: 1
+    path: Assets/Scenes/bas-village.unity
+    guid: 700d6f1c0d44078458356d6834325078
+  - enabled: 1
+    path: Assets/Scenes/Place-marche.unity
+    guid: d07987846dc4a9841af66684bb147cf9
+  - enabled: 1
+    path: Assets/Scenes/Jardins.unity
+    guid: a8dee3f98539bf141a1b8576cd74c34d
   m_configObjects: {}
