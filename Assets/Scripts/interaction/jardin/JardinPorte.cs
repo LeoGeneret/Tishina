@@ -21,6 +21,7 @@ public class JardinPorte : Interactable
         StartCoroutine(Scale(aura, new Vector3(0, 0, 0), smoothTime / 3));
 
         porteMesh.GetComponent<Collider>().enabled = false;
+        transform.GetComponent<Collider>().enabled = false;
     }
     IEnumerator Scale(GameObject objectToScale, Vector3 scaleTo, float seconds)
     {

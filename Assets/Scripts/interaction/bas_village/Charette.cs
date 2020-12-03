@@ -37,6 +37,8 @@ public class Charette : Interactable
 
         int stopHash = Animator.StringToHash("stop");
         horseAnimator.SetTrigger(stopHash);
+
+        transform.GetComponent<Collider>().enabled = false;
     }
 
 

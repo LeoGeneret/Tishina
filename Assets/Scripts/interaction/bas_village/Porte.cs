@@ -19,6 +19,8 @@ public class Porte : Interactable
     {
         StartCoroutine(Scale(aura, new Vector3(0, 0, 0), smoothTime / 3));
         StartCoroutine(Rotate(Vector3.up, endPos, smoothTime));
+
+        transform.GetComponent<Collider>().enabled = false;
     }
     IEnumerator Scale(GameObject objectToScale, Vector3 scaleTo, float seconds)
     {
