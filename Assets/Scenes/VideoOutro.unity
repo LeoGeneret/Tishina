@@ -181,8 +181,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Celui-ci, glorieux, promit au peuple que plus jamais tishina ne serait
-    reduite au silence et repris sa route.
+  m_text: "Celui-ci, glorieux, inspira le peuple qui se fit la promesse que plus
+    jamais il ne serait reduit au silence. \n\nAinsi, Robin des Bruits put reprendre
+    sa route..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bd82e41f0487d4da281cdfa9e0a47e70, type: 2}
   m_sharedMaterial: {fileID: -9071347197817627818, guid: bd82e41f0487d4da281cdfa9e0a47e70, type: 2}
@@ -536,8 +537,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "La ville se r\xE9veilla dans un fracas de sons et de couleurs. les habitants
-    curieux de savoir qui les avait sauv\xE9 sortirent de leur cachette et all\xE8rent
+  m_text: "La ville se r\xE9veilla dans un fracas de sons et de couleurs. les habitants,
+    curieux de savoir qui les avait sauv\xE9, sortirent de leur cachette et all\xE8rent
     \xE0 la rencontre de robin des bruits."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bd82e41f0487d4da281cdfa9e0a47e70, type: 2}
@@ -768,7 +769,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Apr\xE8s avoir arr\xEAt\xE9 l\u2019harmonie, notre h\xE9ros pris grand
     soin de d\xE9truire chaque pi\xE8ce de l\u2019infernale machine puis alla trouver
-    le roi pour le tuer."
+    le roi pour le tuer.\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bd82e41f0487d4da281cdfa9e0a47e70, type: 2}
   m_sharedMaterial: {fileID: -9071347197817627818, guid: bd82e41f0487d4da281cdfa9e0a47e70, type: 2}
