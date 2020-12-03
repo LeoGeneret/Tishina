@@ -11,6 +11,10 @@ public class btnFX : MonoBehaviour
 
     public void HoverSound()
     {
-        myFx.PlayOneShot ()
+        myFx.PlayOneShot (hoverFx);
+    }
+    public void ClickSound()
+    {
+        myFx.PlayOneShot (clickFx);
     }
 }
