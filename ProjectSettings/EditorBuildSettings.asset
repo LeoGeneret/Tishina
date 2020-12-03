@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Jardins.unity
     guid: a8dee3f98539bf141a1b8576cd74c34d
+  - enabled: 1
+    path: Assets/Scenes/VideoOutro.unity
+    guid: 4ffa62af263e6469a8ce9f84e7a55702
   m_configObjects: {}
