@@ -13,7 +13,6 @@ public class Dialogues : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("collider");
         Dialogue.SetActive(true);
         DialogueOverlay.SetActive(true);
 

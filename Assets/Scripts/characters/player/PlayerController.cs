@@ -34,8 +34,8 @@ public class PlayerController : MonoBehaviour
 	private Interactable _interactable;
 
 	// TODO on interactable side
-	public float ammo;
-	public float maxAmmo = 10;
+	private float ammo;
+	private float maxAmmo = 3;
 
 	// GUN
 	[Range(0f, 1.5f)]
@@ -46,6 +46,7 @@ public class PlayerController : MonoBehaviour
 
 	void Start()
 	{
+		ammo = PlayerAmmo.Ammo;
 		// animator = GetComponent<Animator>();
 		cam = Camera.main;
 		camController = cam.GetComponent<ThirdPersonCamera>();
@@ -66,6 +67,8 @@ public class PlayerController : MonoBehaviour
 
 		// GUN TIMER
 		timer += Time.deltaTime;
+
+		UpdateAmmo();
 
 		Zoom(aiming);
 
@@ -235,6 +238,7 @@ public class PlayerController : MonoBehaviour
 		if (ammo < maxAmmo)
         {
 			ammo += 1;
+			UpdateAmmo();
 		}
     }
 
@@ -243,8 +247,48 @@ public class PlayerController : MonoBehaviour
 		if (ammo >= 0)
         {
 			ammo -= 1;
+			UpdateAmmo();
 		}
     }
+
+	public void UpdateAmmo()
+    {
+		PlayerAmmo.Ammo = ammo;
+
+		Transform canvas = GameObject.Find("JaugeSidebar").transform;
+
+		GameObject top = canvas.Find("Plein Hau").gameObject;
+		GameObject mid = canvas.Find("Plein Mid").gameObject;
+		GameObject bot = canvas.Find("Plein Bas").gameObject;
+
+		if (ammo == 0)
+        {
+			top.SetActive(false);
+			mid.SetActive(false);
+			bot.SetActive(false);
+		}
+
+		if (ammo == 1)
+        {
+			top.SetActive(false);
+			mid.SetActive(false);
+			bot.SetActive(true);
+		}
+
+		if (ammo == 2)
+		{
+			top.SetActive(false);
+			mid.SetActive(true);
+			bot.SetActive(true);
+		}
+
+		if (ammo == 3)
+        {
+			top.SetActive(true);
+			mid.SetActive(true);
+			bot.SetActive(true);
+		}
+	}
 
 	void Jump()
 	{
